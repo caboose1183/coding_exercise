@@ -1,12 +1,10 @@
 .main-container {
-  border: 5px solid black;
   height: 100vh;
 
   display: flex;
 }
 
 .image-container {
-  border: 5px solid black;
   width: 50%;
 
   display: flex;
@@ -25,7 +23,7 @@
 
   border-radius: 5px;
 
-  box-shadow: 0 0 5px #ccc ;
+  box-shadow: 0 0 5px #ccc;
 }
 
 .image-upload:hover {
@@ -35,10 +33,25 @@
 .image-upload h3 {
   font-size: 0.8em;
   font-weight: 100;
-  color: rgb(144, 144, 144) 
+  color: rgb(144, 144, 144);
 }
 
-.text-boxes {
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
   border: 5px solid black;
-  width: 50%;
+
+  display: flex;
+  width: 100%;
+}
+
+.text-title {
+
+
+  box-shadow: 0 5px 5px rgb(230, 243, 0);
 }

@@ -1,69 +1,43 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
+import ImageUpload from "./assets/components/ImageUpload";
 import "./assets/symbols/uploadIndicator.png";
 
 function App() {
+  // Image upload hooks section
   const fileInputRef = useRef();
   const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(localStorage.getItem('image'));
+  const [preview, setPreview] = useState(localStorage.getItem("image"));
+
+  // Text edit hook section
+
 
   useEffect(() => {
     if (image) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreview(reader.result);
-        localStorage.setItem("image", reader.result)
+        localStorage.setItem("image", reader.result);
       };
       reader.readAsDataURL(image);
     } else {
-      setPreview(localStorage.getItem('image'));
+      setPreview(localStorage.getItem("image"));
     }
   }, [image]);
 
   return (
     <div className="main-container">
-      <section className="image-container">
-        <form>
-          <input
-            type="file"
-            style={{ display: "none" }}
-            ref={fileInputRef}
-            accept="image/png, image/jpeg"
-            onChange={(event) => {
-              const file = event.target.files[0];
-              if (file) {
-                setImage(file);
-              } else {
-                setImage(null);
-              }
-            }}
-          ></input>
-        </form>
-        <article
-          className="image-upload"
-          onClick={(event) => {
-            event.preventDefault();
-            fileInputRef.current.click();
-          }}
-        >
-          {preview ? (
-            <img src={preview} style={{ width: '100%'}}></img>
-          ) : (
-            <>
-              <img
-                src="src/assets/symbols/uploadIndicator.png"
-                alt="upload"
-              ></img>
-              <h3>PNG, JPEG files only</h3>
-            </>
-          )}
-        </article>
-      </section>
+      <ImageUpload
+        fileInputRef={fileInputRef}
+        setImage={setImage}
+        preview={preview}
+      />
 
-      <section className="text-boxes">
-        <form>
-          <input type="file" style={{ display: "none" }}></input>
-        </form>
+      <section className="text-container">
+        <div className="text-box">
+          <article className="text-title">Text Title</article>
+          <article className="text-body"></article>
+        </div>
       </section>
     </div>
   );
