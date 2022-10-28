@@ -1,0 +1,44 @@
+.main-container {
+  border: 5px solid black;
+  height: 100vh;
+
+  display: flex;
+}
+
+.image-container {
+  border: 5px solid black;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 5px;
+
+  box-shadow: 0 0 5px #ccc ;
+}
+
+.image-upload:hover {
+  cursor: pointer;
+}
+
+.image-upload h3 {
+  font-size: 0.8em;
+  font-weight: 100;
+  color: rgb(144, 144, 144) 
+}
+
+.text-boxes {
+  border: 5px solid black;
+  width: 50%;
+}
