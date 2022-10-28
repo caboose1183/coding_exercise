@@ -18,8 +18,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 300px;
-  height: 300px;
+  width: 90%;
+  height: 50%;
 
   border-radius: 5px;
 
@@ -41,17 +41,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 50%;
+
 }
 
 .text-box {
-  border: 5px solid black;
-
-  display: flex;
-  width: 100%;
+  width: 90%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 5px #ccc;
 }
 
 .text-title {
+  padding: 3%;
 
+  
+  box-shadow: 0 3px 3px rgb(230, 243, 0);
+}
 
-  box-shadow: 0 5px 5px rgb(230, 243, 0);
+.text-body {
+  padding: 5% 10% 5% 5%;
+  height: 100%;
+
+}
+
+.text-footer {
+
 }

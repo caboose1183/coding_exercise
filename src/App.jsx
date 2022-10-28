@@ -11,7 +11,6 @@ function App() {
 
   // Text edit hook section
 
-
   useEffect(() => {
     if (image) {
       const reader = new FileReader();
@@ -37,6 +36,7 @@ function App() {
         <div className="text-box">
           <article className="text-title">Text Title</article>
           <article className="text-body"></article>
+          <article className="text-footer"></article>
         </div>
       </section>
     </div>
