@@ -43,28 +43,28 @@
   align-items: center;
 
   width: 50%;
-
 }
 
 .text-box {
   width: 90%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   box-shadow: 0 0 5px #ccc;
+
+  margin-bottom: 2em;
 }
 
 .text-title {
   padding: 3%;
 
-  
   box-shadow: 0 3px 3px rgb(230, 243, 0);
 }
 
 .text-body {
-  padding: 5% 10% 5% 5%;
-  height: 100%;
-
+  padding: 5% 10% 30% 5%;
+  height: 30%;
 }
 
 .text-footer {
-
+  border-top: 1px solid #ccc;
+  padding: 15%;
 }

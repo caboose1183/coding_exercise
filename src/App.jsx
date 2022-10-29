@@ -35,7 +35,13 @@ function App() {
       <section className="text-container">
         <div className="text-box">
           <article className="text-title">Text Title</article>
-          <article className="text-body"></article>
+          <article className="text-body">body</article>
+          <article className="text-footer"></article>
+        </div>
+
+        <div className="text-box">
+          <article className="text-title">Text Title</article>
+          <article className="text-body">body</article>
           <article className="text-footer"></article>
         </div>
       </section>
