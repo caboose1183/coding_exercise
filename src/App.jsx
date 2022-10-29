@@ -11,8 +11,6 @@ function App() {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(localStorage.getItem("image"));
 
-  // Text edit hook section
-
   useEffect(() => {
     if (image) {
       const reader = new FileReader();
@@ -34,9 +32,9 @@ function App() {
         preview={preview}
       />
 
-        
       <section className="text-container">
-        <TextBox boxNumber={'box1'}/>
+        <TextBox textBoxes={["box1", "box2", "box3"]} />
+        <TextBox textBoxes={["box4", "box5", "box6"]} />
       </section>
     </div>
   );

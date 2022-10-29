@@ -1,3 +1,5 @@
+import "../stylesheeets/images.css"
+
 export default function ImageUpload({fileInputRef, setImage, preview}) {
 
   return (
