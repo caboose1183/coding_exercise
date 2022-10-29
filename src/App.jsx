@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
-import ImageUpload from "./assets/components/ImageUpload";
 import "./assets/symbols/uploadIndicator.png";
+
+import ImageUpload from "./assets/components/ImageUpload";
+import TextBox from "./assets/components/TextBox";
 
 function App() {
   // Image upload hooks section
@@ -32,18 +34,10 @@ function App() {
         preview={preview}
       />
 
+        
       <section className="text-container">
-        <div className="text-box">
-          <article className="text-title">Text Title</article>
-          <article className="text-body">body</article>
-          <article className="text-footer"></article>
-        </div>
-
-        <div className="text-box">
-          <article className="text-title">Text Title</article>
-          <article className="text-body">body</article>
-          <article className="text-footer"></article>
-        </div>
+        <TextBox />
+        <TextBox />
       </section>
     </div>
   );
