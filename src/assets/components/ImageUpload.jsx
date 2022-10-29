@@ -1,6 +1,23 @@
-import "../stylesheeets/images.css"
+import { useState, useRef, useEffect } from "react";
+import "../stylesheeets/images.css";
 
-export default function ImageUpload({fileInputRef, setImage, preview}) {
+export default function ImageUpload() {
+  const fileInputRef = useRef();
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState(localStorage.getItem("image"));
+
+  useEffect(() => {
+    if (image) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreview(reader.result);
+        localStorage.setItem("image", reader.result);
+      };
+      reader.readAsDataURL(image);
+    } else {
+      setPreview(localStorage.getItem("image"));
+    }
+  }, [image]);
 
   return (
     <section className="image-container">
