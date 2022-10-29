@@ -23,11 +23,12 @@
 
 .text-body {
   padding: 5% 10% 30% 5%;
-  height: 30%;
+  height: 50%;
 }
 
 .text-footer {
   border-top: 1px solid #ccc;
+
 }
 
 input {
@@ -35,4 +36,18 @@ input {
   height: 2em;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+button {
+  display: block;
+  background-color: #0992ee;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #53b0ef;
+  cursor: pointer;
 }
