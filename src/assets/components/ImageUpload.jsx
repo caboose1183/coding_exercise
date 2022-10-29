@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "../stylesheeets/images.css";
+import upload from "../symbols/uploadIndicator.png";
 
 export default function ImageUpload() {
   const fileInputRef = useRef();
@@ -49,7 +50,7 @@ export default function ImageUpload() {
         ) : (
           <>
             <img
-              src="src/assets/symbols/uploadIndicator.png"
+              src={upload}
               alt="upload"
             ></img>
             <h3>PNG, JPEG files only</h3>

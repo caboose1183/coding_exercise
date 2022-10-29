@@ -1,5 +1,4 @@
 import "./App.css";
-import "./assets/symbols/uploadIndicator.png";
 
 import ImageUpload from "./assets/components/ImageUpload";
 import TextBox from "./assets/components/TextBox";
