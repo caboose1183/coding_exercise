@@ -36,8 +36,7 @@ function App() {
 
         
       <section className="text-container">
-        <TextBox />
-        <TextBox />
+        <TextBox boxNumber={'box1'}/>
       </section>
     </div>
   );
